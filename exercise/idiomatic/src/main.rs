@@ -10,9 +10,7 @@
 
 const PI: f32 = 3.141_592_7;
 fn count_to_5() -> i32 {
-
     let mut my_var = 0;
-
     loop {
         if my_var > PI as i32 && my_var > 5 {
             break;
@@ -27,9 +25,7 @@ fn main() {
 #[cfg(test)]
 mod test {
     use super::*;
-
     #[test]
-
     fn test_counting() {
         assert_eq!(count_to_5() == 5, true);
     }
