@@ -8,7 +8,8 @@
 
 // Challenge: Clippy doesn't find *everything*. What else would you change to make this code better?
 
-const PI: f32 = 3.141_592_7;
+use std::f32::consts::PI;
+
 fn count_to_5() -> i32 {
     let mut my_var = 0;
     loop {
