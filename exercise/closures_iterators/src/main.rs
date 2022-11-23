@@ -53,8 +53,10 @@ fn main() {
     // ways to accomplish this, but they all end with an iterator consumer.
     let mut pairs_again = vec![(0, 1), (2, 3), (4, 5)];
     for pair in &mut pairs_again {
-        *pair = (pair.0 + 1, pair.1);
+        pair.0 += 1
+        // *pair = (pair.0 + 1, pair.1);
     }
+    println!("{:?}", pairs_again); // should print [3, 6, 9, 12]
 
     let mut numbers_again = vec![1, 2, 3, 4];
     numbers_again = numbers_again.iter_mut().map(|x| *x * 3).collect::<Vec<_>>();
