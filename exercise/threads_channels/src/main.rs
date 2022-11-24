@@ -89,6 +89,7 @@ fn main() {
     // - Use the thread handles to join both threads without getting any compiler warnings.
     let _ = handle_a.join();
     let _ = handle_b.join();
+
     // Challenge: Make two child threads and give them each a receiving end to a channel. From the
     // main thread loop through several values and print each out and then send it to the channel.
     // On the child threads print out the values you receive. Close the sending side in the main
